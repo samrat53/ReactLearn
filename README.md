@@ -1,1 +1,1 @@
-Made to store the updates as I learn React.js
+started to learn React.js, tracking the changes here
