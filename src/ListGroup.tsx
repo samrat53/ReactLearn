@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import { useState } from "react";
 
 function ListGroup() {
   let items = [
@@ -13,11 +13,14 @@ function ListGroup() {
     "chem",
   ];
 
-  const handleClick = (event: MouseEvent) => {
-    console.log(event);
-    // const button=event.target as HTMLButtonElement;
-    // console.log(button.innerHTML)};
-  };
+  let [selectedIndex,setSelectedIndex]=useState(-1);
+  let [name,setName]=useState(' ');
+
+  // const handleClick = (event: MouseEvent) => {
+  //   console.log(event);
+  //   // const button=event.target as HTMLButtonElement;
+  //   // console.log(button.innerHTML)};
+  // };
 
   // items=[];
 
@@ -35,7 +38,20 @@ function ListGroup() {
         jump to next line*/}
 
         {items.map((values, index) => (
-          <li className="list-group-item" key={values} onClick={handleClick}>
+          // <li className="list-group-item" key={values} onClick={handleClick}>
+          //   {index + 1}.{values}
+          // </li>
+          <li
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            key={values}
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
+          >
             {index + 1}.{values}
           </li>
         ))}
