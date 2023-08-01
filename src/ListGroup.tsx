@@ -1,20 +1,17 @@
 import { useState } from "react";
 
-function ListGroup() {
-  let items = [
-    "Cse",
-    "ece",
-    "ee",
-    "eie",
-    "ce",
-    "mech",
-    "produc",
-    "bio",
-    "chem",
-  ];
+interface listGroupProps{
+  items: string[];
+  heading: string;
+}
 
-  let [selectedIndex,setSelectedIndex]=useState(-1);
-  let [name,setName]=useState(' ');
+// function ListGroup(prop: listGroupProps){
+  
+function ListGroup({items,heading}: listGroupProps) { //it fetches the properties of listGroupProps
+
+  let [selectedIndex,setSelectedIndex]=useState(-1); 
+  // setSelectedIndex is a function that takes changes changes in state as thhe parameters
+  // let [name,setName]=useState(' ');
 
   // const handleClick = (event: MouseEvent) => {
   //   console.log(event);
@@ -29,7 +26,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       <ul className="list-group">
         {/* 1. {getList()} */}
 
