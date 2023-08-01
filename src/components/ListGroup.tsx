@@ -1,16 +1,18 @@
 import { useState } from "react";
 
-interface listGroupProps{
+interface listGroupProps {
   items: string[];
   heading: string;
+  onSelectItem: (item: string) => void;
 }
 
 // function ListGroup(prop: listGroupProps){
-  
-function ListGroup({items,heading}: listGroupProps) { //it fetches the properties of listGroupProps
 
-  let [selectedIndex,setSelectedIndex]=useState(-1); 
-  // setSelectedIndex is a function that takes changes changes in state as thhe parameters
+function ListGroup({ items, heading, onSelectItem }: listGroupProps) {
+  //it fetches the properties of listGroupProps
+
+  let [selectedIndex, setSelectedIndex] = useState(-1);
+  // setSelectedIndex is a function that takes changes changes in state as the parameters
   // let [name,setName]=useState(' ');
 
   // const handleClick = (event: MouseEvent) => {
@@ -47,6 +49,7 @@ function ListGroup({items,heading}: listGroupProps) { //it fetches the propertie
             key={values}
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(values);
             }}
           >
             {index + 1}.{values}
