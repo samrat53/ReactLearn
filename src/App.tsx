@@ -1,18 +1,23 @@
-
 import Button from "./components/Button";
+import Alert from "./components/Alert";
+import { useState } from "react";
 
 function App() {
+  const [visibility, setVisibility] = useState(false);
 
-  const mouseClick=()=> console.log("clicked");
+  // const mouseClick=()=> console.log("clicked");
+  const mouseClick = () => setVisibility(true);
   return (
     <div>
-      <Button onMouseClick={mouseClick} color="danger">My Button</Button>
+      {visibility && <Alert onClose={() => setVisibility(false)}></Alert>}
+      <Button onMouseClick={mouseClick} color="danger">
+        My Button
+      </Button>
     </div>
   );
 }
 
 export default App;
-
 
 // import ListGroup from "./components/ListGroup";
 
