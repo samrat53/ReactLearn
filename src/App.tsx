@@ -1,18 +1,34 @@
-// import ListGroup from "./components/ListGroup";
 
-import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
+
+  const mouseClick=()=> console.log("clicked");
   return (
     <div>
-      <Alert>
-        Hello <span>World</span>
-      </Alert>
+      <Button onMouseClick={mouseClick} color="danger">My Button</Button>
     </div>
   );
 }
 
 export default App;
+
+
+// import ListGroup from "./components/ListGroup";
+
+// import Alert from "./components/Alert";
+
+// function App() {
+//   return (
+//     <div>
+//       <Alert>
+//         Hello <span>World</span>
+//       </Alert>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // const handleSelectItem = (it: string) => {
 //   console.log(it);
