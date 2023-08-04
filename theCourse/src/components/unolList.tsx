@@ -1,12 +1,15 @@
+import "./unolStyle.css"
+
 interface ListProps {
   children: any;
   day: any;
 }
 
 const UnOrderList = ({ children, day }: ListProps) => {
+  const newImg= "https://picsum.photos/200";
   return (
-    <>
-      <h1>The Message</h1>
+    <div className="container">
+      <h1 className="message">The Message</h1>
       <ul>
         <li>Hello</li>
         <li>World</li>
@@ -14,7 +17,9 @@ const UnOrderList = ({ children, day }: ListProps) => {
       </ul>
       <p>Your Lucky number is {children}</p>
       <h2>This Year is: {day}</h2>
-    </>
+      <img src={newImg} className="randImg"></img>
+      <pre className="tag">Refresh to Generate & Wait</pre>
+    </div>
   );
 };
 
