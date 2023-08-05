@@ -17,7 +17,7 @@ const UnOrderList = ({ children, day }: ListProps) => {
       </ul>
       <p>Your Lucky number is {children}</p>
       <h2>This Year is: {day}</h2>
-      <img src={newImg} className="randImg"></img>
+      <img src={newImg + "?grayscale"} className="randImg"></img>
       <pre className="tag">Refresh to Generate & Wait</pre>
     </div>
   );

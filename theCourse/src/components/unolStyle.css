@@ -10,8 +10,9 @@ ul {
   margin: 0px;
   padding: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-content: center;
   height: auto;
   width: auto;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;

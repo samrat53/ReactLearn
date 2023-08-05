@@ -15,8 +15,9 @@ function App() {
   // }
   // ------------------------------------------------------------------
   
-  // const LuckyNo = 5;
+  // const LuckyNo = LuckyNo=(Math.floor(Math.random()*10));
   // let currYear=new Date().getFullYear();
+  
 
   return (
     <>
